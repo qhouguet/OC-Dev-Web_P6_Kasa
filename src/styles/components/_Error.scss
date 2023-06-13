@@ -1,0 +1,30 @@
+.error-link {
+  color: $main-color;
+}
+
+.error-page {
+  @extend .error-link;
+  margin: 120px 57px;
+  text-align: center;
+
+  span {
+    display: block;
+  }
+
+  .error-title {
+    font-size: 6.4rem;
+    font-weight: 700;
+  }
+
+  .error-description {
+    font-size: 1.15rem;
+    line-height: 142.6%;
+    margin: 113px 0;
+  }
+
+  a {
+    font-size: 0.9rem;
+    text-decoration: underline;
+    margin-bottom: 113px;
+  }
+}
