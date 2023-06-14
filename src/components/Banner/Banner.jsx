@@ -6,7 +6,15 @@ function Banner(props) {
 
   return (
     <div className="wrapper-width ">
-      <div className={props.type === 'home' ? 'home-banner' : 'about-banner'}>
+      <div
+        className={
+          props.type === 'home'
+            ? 'home-banner'
+            : props.type === 'about'
+            ? 'about-banner'
+            : 'location-carousel'
+        }
+      >
         <img className="image" src={bannerImage} alt={altImage} />
         <div className="overlay"></div>
         {props.subtitle ? <p>{props.subtitle}</p> : null}
