@@ -1,6 +1,6 @@
 @import './settings/_reset';
 @import './settings/_settings';
-@import './components/_Navbar';
-@import './components/_Footer';
-@import './components/_Banner';
-@import './components/_Error';
+@import '../components/Navbar/_Navbar';
+@import '../components/Footer/_Footer';
+@import '../components/Banner/_Banner';
+@import '../components/Error/_Error';

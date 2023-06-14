@@ -5,8 +5,8 @@ import Home from './pages/Home/Home'
 import About from './pages/About/About'
 import Location from './pages/Location/Location'
 import Error from './pages/Error404/Error404'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
+import Navbar from './components/Navbar/Navbar'
+import Footer from './components/Footer/Footer'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
