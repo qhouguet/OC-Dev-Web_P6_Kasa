@@ -1,66 +1,58 @@
 .home-banner {
-  height: 111px;
+  @include size(111px, auto);
   margin: $margin-mobile;
   position: relative;
 
-  @media screen and (min-width: 600px) {
-    height: 223px;
+  @media screen and (min-width: $width-tablette) {
+    @include size(223px, auto);
     margin: $margin-desktop;
   }
 
-  p {
+  h1 {
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
-    width: 65%;
-    font-weight: 500;
-    font-size: 1.5rem;
-    line-height: 100%;
-    color: white;
+    @include size(auto, 65%);
+    @include font(500, 1.5rem, 100%, #fff);
     margin-left: 16px;
 
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: $width-tablette) {
       margin: 0;
       font-size: 3rem;
-      width: 100%;
+      @include size(auto, 100%);
       text-align: center;
     }
   }
 }
 
 .image {
-  width: 100%;
-  height: 100%;
+  @include size(100%, 100%);
   object-fit: cover;
   border-radius: 10px;
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: $width-tablette) {
     border-radius: 25px;
   }
 }
 
 .about-banner {
-  height: 223px;
+  @include size(223px, auto);
   margin: $margin-mobile;
   position: relative;
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: $width-tablette) {
     margin: $margin-desktop;
   }
 }
 
 .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  @include overlay;
   background: #000000;
   mix-blend-mode: darken;
   opacity: 0.3;
   border-radius: 10px;
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: $width-tablette) {
     border-radius: 25px;
   }
 }

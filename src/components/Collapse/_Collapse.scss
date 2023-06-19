@@ -9,23 +9,20 @@
   position: relative;
   margin: $margin-mobile;
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: $width-tablette) {
     margin: 30px 14.5%;
   }
 }
 
 .collapse-description {
   @include collapse;
+  @include font(400, 0.8rem, 142.6%, $main-color);
   background: #f7f7f7;
   z-index: 0;
   padding-top: 3rem;
-  font-weight: 400;
-  font-size: 0.8rem;
-  line-height: 142.6%;
-  color: $main-color;
   margin-top: -30px;
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: $width-tablette) {
     padding-top: 3rem;
     font-size: 1.12rem;
   }
@@ -33,22 +30,20 @@
 
 .collapse-bar {
   @include collapse;
+  @include font(500, 0.8rem, 142.6%, #fff);
   padding: 10px;
-  font-size: 0.8rem;
-  line-height: 142.6%;
-  color: white;
   background: $main-color;
   display: flex;
   justify-content: space-between;
   z-index: 1;
 
   .desktop-btn {
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: $width-tablette) {
       width: 24px;
     }
   }
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: $width-tablette) {
     font-size: 1.6rem;
   }
 }

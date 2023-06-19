@@ -4,7 +4,7 @@
   align-items: center;
   margin: $margin-mobile;
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: $width-tablette) {
     margin: $margin-desktop;
   }
 }
@@ -24,7 +24,7 @@
     font-size: 0.8rem;
     text-transform: uppercase;
 
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: $width-tablette) {
       text-transform: none;
       font-size: 1.6rem;
       margin-left: 60px;
@@ -36,7 +36,7 @@
   width: 145px;
   height: fit-content;
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: $width-tablette) {
     width: 210px;
   }
 }

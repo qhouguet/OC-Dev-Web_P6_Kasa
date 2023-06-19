@@ -5,8 +5,6 @@ import Collapse from '../../components/Collapse/Collapse'
 import about from '../../datas/about.json'
 
 function About() {
-  console.log(about[1].description)
-
   return (
     <div className="test">
       <Banner

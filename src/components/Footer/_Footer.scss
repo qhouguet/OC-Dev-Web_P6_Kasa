@@ -17,7 +17,7 @@
     line-height: 142.6%;
     margin-top: 10px;
 
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: $width-tablette) {
       width: auto;
       font-size: 1.6rem;
       margin-top: 40px;

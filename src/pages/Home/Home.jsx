@@ -1,6 +1,7 @@
 import React from 'react'
 import Banner from '../../components/Banner/Banner'
 import image from '../../assets/home_banner.webp'
+import Cards from '../../components/Cards/Cards'
 
 function Home() {
   return (
@@ -11,6 +12,7 @@ function Home() {
         image={image}
         alt="Photo de falaises face à la mer"
       />
+      <Cards />
     </div>
   )
 }

@@ -1,0 +1,12 @@
+.cards {
+  @media screen and (min-width: $width-tablette) {
+    background-color: #f7f7f7;
+    padding: 25px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: $margin-desktop;
+  }
+}

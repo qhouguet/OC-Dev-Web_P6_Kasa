@@ -14,17 +14,25 @@
   .error-title {
     font-size: 6.4rem;
     font-weight: 700;
+    @media screen and (min-width: $width-tablette) {
+      font-size: 18rem;
+    }
   }
 
   .error-description {
     font-size: 1.15rem;
     line-height: 142.6%;
     margin: 113px 0;
+    @media screen and (min-width: $width-tablette) {
+      font-size: 2.25rem;
+    }
   }
 
   a {
     font-size: 0.9rem;
     text-decoration: underline;
-    margin-bottom: 113px;
+    @media screen and (min-width: $width-tablette) {
+      font-size: 1.15rem;
+    }
   }
 }
