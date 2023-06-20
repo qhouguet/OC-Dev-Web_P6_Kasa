@@ -11,6 +11,7 @@ function Cards() {
               title={data.title}
               image={data.cover}
               alt={data.title}
+              id={data.id}
               key={data.id}
             />
           )
