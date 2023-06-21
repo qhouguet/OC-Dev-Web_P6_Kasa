@@ -1,16 +1,15 @@
 @mixin collapse {
   border-radius: 5px;
-  position: relative;
   width: 100%;
   padding: 20px;
 }
 
 .wrapper-collapse {
   position: relative;
-  margin: $margin-mobile;
-
+  margin-bottom: 20px;
+  width: 100%;
   @media screen and (min-width: $width-tablette) {
-    margin: 30px 14.5%;
+    margin-bottom: 30px;
   }
 }
 
@@ -18,7 +17,6 @@
   @include collapse;
   @include font(400, 0.8rem, 142.6%, $main-color);
   background: #f7f7f7;
-  z-index: 0;
   padding-top: 3rem;
   margin-top: -30px;
 
@@ -31,6 +29,7 @@
 .collapse-bar {
   @include collapse;
   @include font(500, 0.8rem, 142.6%, #fff);
+  position: relative;
   padding: 10px;
   background: $main-color;
   display: flex;

@@ -9,8 +9,10 @@ function Collapse(props) {
     setOpen(!open)
   }
 
+  const isArray = Array.isArray(props.description)
+
   return (
-    <div className="wrapper-width">
+    <>
       <div className="wrapper-collapse">
         <div className="collapse-bar" onClick={toggle}>
           <h2>{props.title}</h2>
@@ -20,11 +22,21 @@ function Collapse(props) {
             alt="Ouvrir ou fermer le composant"
           />
         </div>
-        {open && (
-          <div className="collapse-description">{props.description}</div>
-        )}
+        {open &&
+          (isArray ? (
+            <div className="collapse-description">
+              {props.description.map((equipment) => (
+                <span key={equipment}>
+                  {equipment}
+                  <br />
+                </span>
+              ))}
+            </div>
+          ) : (
+            <div className="collapse-description">{props.description}</div>
+          ))}
       </div>
-    </div>
+    </>
   )
 }
 export default Collapse

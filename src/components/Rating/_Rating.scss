@@ -1,0 +1,8 @@
+.rating {
+  img {
+    margin-right: 7px;
+    @media screen and (min-width: $width-tablette) {
+      @include size(24px, 24px);
+    }
+  }
+}

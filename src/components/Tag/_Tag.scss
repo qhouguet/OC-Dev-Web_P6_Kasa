@@ -1,0 +1,19 @@
+.tag {
+  @include font(500, 0.625rem, auto, #fff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $main-color;
+  border-radius: 5px;
+  @include size(18px, auto);
+  min-width: 78px;
+  margin-right: 10px;
+  padding: 3px;
+
+  @media screen and (min-width: $width-tablette) {
+    font-size: 0.875rem;
+    min-width: 103px;
+    height: 25px;
+    padding: 6px;
+  }
+}

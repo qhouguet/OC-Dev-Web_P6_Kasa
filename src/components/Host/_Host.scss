@@ -1,0 +1,21 @@
+.host {
+  display: flex;
+  align-items: center;
+  span {
+    display: block;
+    @include font(500, 0.75rem, 142.6%, $main-color);
+    margin-right: 10px;
+    text-align: right;
+    @media screen and (min-width: $width-tablette) {
+      font-size: 1.125rem;
+    }
+  }
+  img {
+    @include size(32px, 32px);
+    border-radius: 50%;
+    object-fit: cover;
+    @media screen and (min-width: $width-tablette) {
+      @include size(64px, 64px);
+    }
+  }
+}

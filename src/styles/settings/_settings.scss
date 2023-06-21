@@ -38,3 +38,11 @@ body {
   line-height: $line-height;
   color: $font-color;
 }
+
+.about-collapse {
+  margin: $margin-mobile;
+
+  @media screen and (min-width: $width-tablette) {
+    margin: 30px 14.5%;
+  }
+}

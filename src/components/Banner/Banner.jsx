@@ -16,13 +16,13 @@ function Banner(props) {
   }
 
   return (
-    <div className="wrapper-width ">
+    <>
       <div className={classDiv}>
         <img className="image" src={bannerImage} alt={altImage} />
         <div className="overlay"></div>
         {props.subtitle ? <h1>{props.subtitle}</h1> : null}
       </div>
-    </div>
+    </>
   )
 }
 

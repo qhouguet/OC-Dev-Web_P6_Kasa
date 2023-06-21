@@ -1,0 +1,60 @@
+.renting-description {
+  margin: $margin-mobile;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: $width-tablette) {
+    font-size: 2.25rem;
+    margin: $margin-desktop;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  h2 {
+    @include font(500, 1.15rem, 142.6%, $main-color);
+    @media screen and (min-width: $width-tablette) {
+      font-size: 2.25rem;
+    }
+  }
+
+  .location {
+    @include font(500, 0.875rem, 142.6%, $main-color);
+    display: inline-block;
+    margin: 8px 0;
+    @media screen and (min-width: $width-tablette) {
+      font-size: 1.15rem;
+    }
+  }
+
+  .tags {
+    display: flex;
+  }
+
+  .host-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    @media screen and (min-width: $width-tablette) {
+      flex-direction: column;
+      margin-top: 0;
+    }
+  }
+}
+
+.collapse-renting {
+  margin: $margin-mobile;
+  @media screen and (min-width: $width-tablette) {
+    margin: $margin-desktop;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.renting-wrapper {
+  @media screen and (min-width: $width-tablette) {
+    width: 47%;
+  }
+}

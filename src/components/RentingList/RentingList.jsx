@@ -3,7 +3,7 @@ import logements from '../../data/logements.json'
 
 function Cards() {
   return (
-    <div className="wrapper-width">
+    <>
       <section className="cards">
         {logements.map((data) => (
           <Card
@@ -15,7 +15,7 @@ function Cards() {
           />
         ))}
       </section>
-    </div>
+    </>
   )
 }
 
