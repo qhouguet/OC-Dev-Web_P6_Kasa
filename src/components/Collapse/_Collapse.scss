@@ -17,13 +17,37 @@
   @include collapse;
   @include font(400, 0.8rem, 142.6%, $main-color);
   background: #f7f7f7;
-  padding-top: 3rem;
-  margin-top: -30px;
+  // padding-top: 3rem;
+  // margin-top: -30px;
+  padding: 0;
+  // transition: height 0.3s ease-in-out;
+  // height: 0px;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.2s ease;
 
   @media screen and (min-width: $width-tablette) {
-    padding-top: 3rem;
+    // padding-top: 3rem;
     font-size: 1.12rem;
   }
+
+  div {
+    overflow: hidden;
+
+    span {
+      padding-top: 20px;
+    }
+  }
+}
+
+.active {
+  grid-template-rows: 1fr;
+  height: auto;
+  overflow: auto;
+}
+
+.styletest {
+  padding: 20px;
 }
 
 .collapse-bar {
@@ -39,6 +63,7 @@
   .desktop-btn {
     @media screen and (min-width: $width-tablette) {
       width: 24px;
+      cursor: pointer;
     }
   }
 

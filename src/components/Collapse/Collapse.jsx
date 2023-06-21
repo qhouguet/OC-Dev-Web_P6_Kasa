@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import close_btn from '../../assets/close_btn.svg'
 import open_btn from '../../assets/open_btn.svg'
 
 function Collapse(props) {
@@ -11,30 +10,51 @@ function Collapse(props) {
 
   const isArray = Array.isArray(props.description)
 
+  const [rotateChevron, setRotateChevron] = useState(false)
+
+  const handleRotate = () => setRotateChevron(!rotateChevron)
+
+  const rotate = rotateChevron ? 'rotate(-180deg)' : 'rotate(0)'
+
   return (
     <>
       <div className="wrapper-collapse">
-        <div className="collapse-bar" onClick={toggle}>
+        <div className="collapse-bar">
           <h2>{props.title}</h2>
           <img
+            style={{ transform: rotate, transition: 'all 0.15s linear' }}
             className="desktop-btn"
-            src={open ? close_btn : open_btn}
+            src={open_btn}
             alt="Ouvrir ou fermer le composant"
+            onClick={() => {
+              handleRotate()
+              toggle()
+            }}
           />
         </div>
-        {open &&
-          (isArray ? (
-            <div className="collapse-description">
-              {props.description.map((equipment) => (
-                <span key={equipment}>
-                  {equipment}
-                  <br />
-                </span>
-              ))}
+        {
+          // open &&
+          isArray ? (
+            <div className={`collapse-description ${open ? 'active' : ''}`}>
+              <div>
+                <div className="styletest">
+                  {props.description.map((equipment) => (
+                    <span key={equipment}>
+                      {equipment}
+                      <br />
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
           ) : (
-            <div className="collapse-description">{props.description}</div>
-          ))}
+            <div className={`collapse-description ${open ? 'active' : ''}`}>
+              <div>
+                <div className="styletest">{props.description}</div>
+              </div>
+            </div>
+          )
+        }
       </div>
     </>
   )

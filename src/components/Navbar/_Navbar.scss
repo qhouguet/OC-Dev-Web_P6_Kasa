@@ -2,10 +2,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: $margin-mobile;
+  // margin: $margin-mobile;
+  margin: 0 20px;
+  padding-top: 20px;
 
   @media screen and (min-width: $width-tablette) {
-    margin: $margin-desktop;
+    // margin: $margin-desktop;
+    margin: 0 7%;
+    padding-top: 3.1%;
   }
 }
 
