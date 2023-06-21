@@ -1,5 +1,3 @@
-import React from 'react'
-
 function Banner(props) {
   const bannerImage = props.image
   const altImage = props.alt
@@ -14,7 +12,7 @@ function Banner(props) {
       classDiv = 'about-banner'
       break
     default:
-      classDiv = 'location-carousel'
+      classDiv = ''
   }
 
   return (

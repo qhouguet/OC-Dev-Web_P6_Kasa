@@ -1,7 +1,13 @@
-import React from 'react'
+import Gallery from '../Gallery/Gallery'
 
 function CurrentRenting(props) {
-  return <div></div>
+  const currentRent = props.renting
+
+  return (
+    <div className="wrapper-width">
+      <Gallery images={currentRent.pictures} />
+    </div>
+  )
 }
 
 export default CurrentRenting

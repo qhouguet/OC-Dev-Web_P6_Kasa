@@ -1,0 +1,62 @@
+.slideshow {
+  margin: $margin-mobile;
+  @include size(255px, auto);
+  position: relative;
+
+  @media screen and (min-width: $width-tablette) {
+    margin: $margin-desktop;
+    @include size(415px, auto);
+  }
+
+  @mixin bracket {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 1;
+    cursor: pointer;
+
+    @media screen and (min-width: $width-tablette) {
+      @include size(79px, 47px);
+    }
+  }
+
+  .left-bracket {
+    @include bracket;
+    left: 6px;
+
+    @media screen and (min-width: $width-tablette) {
+      left: 23px;
+    }
+  }
+
+  .right-bracket {
+    @include bracket;
+    right: 6px;
+
+    @media screen and (min-width: $width-tablette) {
+      right: 23px;
+    }
+  }
+
+  .slide-numerotation {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include font(500, 1.15rem, 142.6%, #fff);
+    @media screen and (min-width: $width-tablette) {
+      bottom: 13px;
+    }
+  }
+
+  .slide {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+
+    @media screen and (min-width: $width-tablette) {
+      border-radius: 25px;
+    }
+  }
+}

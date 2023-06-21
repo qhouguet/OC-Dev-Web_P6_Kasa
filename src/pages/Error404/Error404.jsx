@@ -1,11 +1,7 @@
 import Error from '../../components/Error/Error'
 
 function Error404() {
-  return (
-    <div>
-      <Error />
-    </div>
-  )
+  return <Error />
 }
 
 export default Error404

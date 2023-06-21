@@ -1,12 +1,11 @@
-import React from 'react'
 import Banner from '../../components/Banner/Banner'
 import image from '../../assets/about_banner.webp'
 import Collapse from '../../components/Collapse/Collapse'
-import about from '../../datas/about.json'
+import about from '../../data/about.json'
 
 function About() {
   return (
-    <div className="test">
+    <>
       <Banner
         type="about"
         image={image}
@@ -22,7 +21,7 @@ function About() {
           />
         )
       })}
-    </div>
+    </>
   )
 }
 
