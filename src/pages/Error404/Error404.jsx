@@ -1,4 +1,4 @@
-import Error from '../../components/Error/Error'
+import Error from 'components/ui/Error/Error'
 
 function Error404() {
   return <Error />

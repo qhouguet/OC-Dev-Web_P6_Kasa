@@ -1,6 +1,6 @@
-import Banner from '../../components/Banner/Banner'
-import image from '../../images/about_banner.webp'
-import Collapse from '../../components/Collapse/Collapse'
+import Banner from 'components/ui/Banner/Banner'
+import image from 'images/about_banner.webp'
+import Collapse from 'components/ui/Collapse/Collapse'
 
 function About() {
   const about = [

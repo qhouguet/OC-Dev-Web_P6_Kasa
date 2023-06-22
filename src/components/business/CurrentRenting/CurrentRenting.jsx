@@ -1,5 +1,5 @@
-import Gallery from '../Gallery/Gallery'
-import RentingDescription from '../RentingDescription/RentingDescription'
+import Gallery from 'components/ui/Gallery/Gallery'
+import RentingDescription from 'components/ui/RentingDescription/RentingDescription'
 
 function CurrentRenting(props) {
   const currentRent = props.renting

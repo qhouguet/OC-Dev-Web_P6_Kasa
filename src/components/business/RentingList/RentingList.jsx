@@ -1,6 +1,6 @@
-import Card from '../Card/Card'
+import Card from 'components/ui/Card/Card'
 import { useEffect, useState } from 'react'
-import { fetchData } from '../../services/fetch'
+import { fetchData } from 'services/fetch'
 
 function Cards() {
   const [data, setData] = useState([])

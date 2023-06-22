@@ -1,6 +1,6 @@
-import Banner from '../../components/Banner/Banner'
-import image from '../../images/home_banner.webp'
-import RentingList from '../../components/RentingList/RentingList'
+import Banner from 'components/ui/Banner/Banner'
+import image from 'images/home_banner.webp'
+import RentingList from 'components/business/RentingList/RentingList'
 
 function Home() {
   return (

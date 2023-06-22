@@ -1,7 +1,7 @@
-import CurrentRenting from '../../components/CurrentRenting/CurrentRenting'
+import CurrentRenting from 'components/business/CurrentRenting/CurrentRenting'
 import { useEffect, useState } from 'react'
-import { fetchData } from '../../services/fetch'
-import Error from '../../components/Error/Error'
+import { fetchData } from 'services/fetch'
+import Error from 'components/ui/Error/Error'
 
 function Renting() {
   const [isLoading, setLoading] = useState(true)

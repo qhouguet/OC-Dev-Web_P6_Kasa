@@ -1,7 +1,7 @@
-import Tag from '../Tag/Tag'
-import Host from '../Host/Host'
-import Rating from '../Rating/Rating'
-import Collapse from '../Collapse/Collapse'
+import Tag from 'components/ui/Tag/Tag'
+import Host from 'components/ui/Host/Host'
+import Rating from 'components/ui/Rating/Rating'
+import Collapse from 'components/ui/Collapse/Collapse'
 
 function RentingDescription(props) {
   return (
