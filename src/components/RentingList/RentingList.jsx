@@ -1,11 +1,20 @@
 import Card from '../Card/Card'
-import logements from '../../data/logements.json'
+import { useEffect, useState } from 'react'
+import { fetchData } from '../../services/fetch'
 
 function Cards() {
+  const [data, setData] = useState([])
+
+  useEffect(() => {
+    fetchData().then((res) => {
+      setData(res)
+    })
+  }, [])
+
   return (
     <>
       <section className="cards">
-        {logements.map((data) => (
+        {data.map((data) => (
           <Card
             title={data.title}
             image={data.cover}

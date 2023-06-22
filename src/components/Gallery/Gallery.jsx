@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import leftBracket from '../../assets/left-bracket.svg'
-import rightBracket from '../../assets/right-bracket.svg'
+import leftBracket from '../../images/left-bracket.svg'
+import rightBracket from '../../images/right-bracket.svg'
 
 function Gallery({ images }) {
   const [currentIndex, setCurrentIndex] = useState(0)

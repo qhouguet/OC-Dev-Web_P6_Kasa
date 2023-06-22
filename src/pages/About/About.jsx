@@ -1,5 +1,5 @@
 import Banner from '../../components/Banner/Banner'
-import image from '../../assets/about_banner.webp'
+import image from '../../images/about_banner.webp'
 import Collapse from '../../components/Collapse/Collapse'
 
 function About() {

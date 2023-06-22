@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import open_btn from '../../assets/open_btn.svg'
+import open_btn from '../../images/open_btn.svg'
 
 function Collapse(props) {
   const [open, setOpen] = useState(false)

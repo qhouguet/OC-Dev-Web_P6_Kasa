@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 function Card(props) {
   return (
-    <Link to={`/renting/${props.id}`}>
+    <Link to={{ pathname: '/renting', search: `?_id=${props.id}` }}>
       <figure className="card">
         <img src={props.image} alt={props.alt}></img>
         <div className="mask-over"></div>

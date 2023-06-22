@@ -1,5 +1,5 @@
 import Banner from '../../components/Banner/Banner'
-import image from '../../assets/home_banner.webp'
+import image from '../../images/home_banner.webp'
 import RentingList from '../../components/RentingList/RentingList'
 
 function Home() {

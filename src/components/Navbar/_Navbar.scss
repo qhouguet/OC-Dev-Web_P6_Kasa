@@ -20,6 +20,7 @@
   a.active {
     text-decoration: underline;
     color: $main-color;
+    overflow: hidden;
   }
 
   li {

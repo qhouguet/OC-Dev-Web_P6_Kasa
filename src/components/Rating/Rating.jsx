@@ -1,5 +1,5 @@
-import redStar from '../../assets/red_star.svg'
-import greyStar from '../../assets/grey_star.svg'
+import redStar from '../../images/red_star.svg'
+import greyStar from '../../images/grey_star.svg'
 
 function Rating(props) {
   const allStars = [1, 2, 3, 4, 5]
