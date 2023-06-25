@@ -12,19 +12,17 @@ function Cards() {
   }, [])
 
   return (
-    <>
-      <section className="cards">
-        {data.map((data) => (
-          <Card
-            title={data.title}
-            image={data.cover}
-            alt={data.title}
-            id={data.id}
-            key={data.id}
-          />
-        ))}
-      </section>
-    </>
+    <section className="card-list">
+      {data.map((data) => (
+        <Card
+          title={data.title}
+          image={data.cover}
+          alt={data.title}
+          id={data.id}
+          key={data.id}
+        />
+      ))}
+    </section>
   )
 }
 

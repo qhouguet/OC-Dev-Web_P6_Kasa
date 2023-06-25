@@ -5,8 +5,8 @@ function CurrentRenting(props) {
   const currentRent = props.renting
 
   return (
-    <div className="wrapper-width">
-      <Gallery images={currentRent.pictures} />
+    <>
+      <Gallery images={currentRent.pictures} alt={currentRent.title} />
       <RentingDescription
         title={currentRent.title}
         description={currentRent.description}
@@ -16,7 +16,7 @@ function CurrentRenting(props) {
         equipments={currentRent.equipments}
         tags={currentRent.tags}
       />
-    </div>
+    </>
   )
 }
 

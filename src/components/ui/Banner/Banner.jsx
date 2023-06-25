@@ -1,28 +1,10 @@
-function Banner(props) {
-  const bannerImage = props.image
-  const altImage = props.alt
-
-  const classType = props.type
-  let classDiv = ''
-  switch (classType) {
-    case 'home':
-      classDiv = 'home-banner'
-      break
-    case 'about':
-      classDiv = 'about-banner'
-      break
-    default:
-      classDiv = ''
-  }
-
+function Banner({ subtitle, image, alt }) {
   return (
-    <>
-      <div className={classDiv}>
-        <img className="image" src={bannerImage} alt={altImage} />
-        <div className="overlay"></div>
-        {props.subtitle ? <h1>{props.subtitle}</h1> : null}
-      </div>
-    </>
+    <div className="banner">
+      <img className="banner__image" src={image} alt={alt} />
+      <div className="banner__overlay"></div>
+      {subtitle ? <h1 className="banner__title">{subtitle}</h1> : null}
+    </div>
   )
 }
 

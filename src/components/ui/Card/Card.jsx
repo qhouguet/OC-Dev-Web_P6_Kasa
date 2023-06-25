@@ -1,13 +1,16 @@
 import { Link } from 'react-router-dom'
 
-function Card(props) {
+function Card({ title, image, alt, id }) {
   return (
-    <Link to={{ pathname: '/renting', search: `?_id=${props.id}` }}>
+    <Link
+      className="card-container"
+      to={{ pathname: '/renting', search: `?_id=${id}` }}
+    >
       <figure className="card">
-        <img src={props.image} alt={props.alt}></img>
-        <div className="mask-over"></div>
-        <figcaption>
-          {props.title ? props.title : 'Titre de la location'}
+        <img className="card__image" src={image} alt={alt}></img>
+        <div className="card__overlay"></div>
+        <figcaption className="card__caption">
+          {title ? title : 'Titre de la location'}
         </figcaption>
       </figure>
     </Link>

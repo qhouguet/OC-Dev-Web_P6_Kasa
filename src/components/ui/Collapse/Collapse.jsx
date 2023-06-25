@@ -1,62 +1,75 @@
 import React, { useState } from 'react'
 import open_btn from 'images/open_btn.svg'
 
-function Collapse(props) {
+function Collapse({ title, description }) {
   const [open, setOpen] = useState(false)
 
   function toggle() {
     setOpen(!open)
   }
 
-  const isArray = Array.isArray(props.description)
+  // On vient stocker un booléen pour savoir si
+  // on va devoir itérer sur un array ou
+  // si on va travailler sur juste une string
+  const isArray = Array.isArray(description)
 
-  const [rotateChevron, setRotateChevron] = useState(false)
-
-  const handleRotate = () => setRotateChevron(!rotateChevron)
-
-  const rotate = rotateChevron ? 'rotate(-180deg)' : 'rotate(0)'
+  // On vient changer la valeur de notre attribut aria-hidden
+  // selon notre state
+  let isAriaHiddenTrue = ''
+  open ? (isAriaHiddenTrue = 'false') : (isAriaHiddenTrue = 'true')
 
   return (
-    <>
-      <div className="wrapper-collapse">
-        <div className="collapse-bar">
-          <h2>{props.title}</h2>
-          <img
-            style={{ transform: rotate, transition: 'all 0.15s linear' }}
-            className="desktop-btn"
-            src={open_btn}
-            alt="Ouvrir ou fermer le composant"
-            onClick={() => {
-              handleRotate()
-              toggle()
-            }}
-          />
-        </div>
-        {
-          // open &&
-          isArray ? (
-            <div className={`collapse-description ${open ? 'active' : ''}`}>
-              <div>
-                <div className="styletest">
-                  {props.description.map((equipment) => (
-                    <span key={equipment}>
-                      {equipment}
-                      <br />
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          ) : (
-            <div className={`collapse-description ${open ? 'active' : ''}`}>
-              <div>
-                <div className="styletest">{props.description}</div>
-              </div>
-            </div>
-          )
-        }
+    <div className="collapse">
+      <div className="collapse__bar">
+        <h2 className="collapse__bar__title">{title}</h2>
+        <img
+          className={`collapse__bar__button ${
+            open ? 'collapse__bar__button--active' : ''
+          }`}
+          src={open_btn}
+          alt="Ouvrir ou fermer le composant"
+          onClick={() => {
+            toggle()
+          }}
+        />
       </div>
-    </>
+      {isArray ? (
+        <div
+          className={`collapse__description ${
+            open ? 'collapse__description--active' : ''
+          }`}
+        >
+          <div>
+            <div
+              className="collapse__description__style"
+              aria-hidden={isAriaHiddenTrue}
+            >
+              {description.map((equipment) => (
+                <span key={equipment} aria-hidden={isAriaHiddenTrue}>
+                  {equipment}
+                  <br />
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      ) : (
+        <div
+          className={`collapse__description ${
+            open ? 'collapse__description--active' : ''
+          }`}
+        >
+          <div>
+            <div
+              className="collapse__description__style"
+              aria-hidden={isAriaHiddenTrue}
+            >
+              {description}
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
   )
 }
 export default Collapse

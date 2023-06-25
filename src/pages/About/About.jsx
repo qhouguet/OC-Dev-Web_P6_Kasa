@@ -30,13 +30,15 @@ function About() {
     },
   ]
   return (
-    <div className="wrapper-width">
-      <Banner
-        type="about"
-        image={image}
-        alt="Photo d'une vallée au milieu des montagnes."
-      />
-      <div className="wrapper-width about-collapse">
+    <>
+      <div className="about-banner">
+        <Banner
+          type="about"
+          image={image}
+          alt="Photo d'une vallée au milieu des montagnes."
+        />
+      </div>
+      <section className="about-collapse">
         {about.map((data) => {
           return (
             <Collapse
@@ -46,8 +48,8 @@ function About() {
             />
           )
         })}
-      </div>
-    </div>
+      </section>
+    </>
   )
 }
 

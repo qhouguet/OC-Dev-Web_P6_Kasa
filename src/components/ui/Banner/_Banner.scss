@@ -1,14 +1,35 @@
-.home-banner {
-  @include size(111px, auto);
+.banner {
+  @include size(100%, auto);
   margin: $margin-mobile;
   position: relative;
 
-  @media screen and (min-width: $width-tablette) {
-    @include size(223px, auto);
+  @media screen and (min-width: $width-desktop) {
     margin: $margin-desktop;
   }
 
-  h1 {
+  &__image {
+    @include size(100%, 100%);
+    object-fit: cover;
+    border-radius: 10px;
+
+    @media screen and (min-width: $width-tablette) {
+      border-radius: 25px;
+    }
+  }
+
+  &__overlay {
+    @include overlay;
+    background: #000000;
+    mix-blend-mode: darken;
+    opacity: 0.3;
+    border-radius: 10px;
+
+    @media screen and (min-width: $width-tablette) {
+      border-radius: 25px;
+    }
+  }
+
+  &__title {
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
@@ -18,41 +39,12 @@
 
     @media screen and (min-width: $width-tablette) {
       margin: 0;
-      font-size: 3rem;
+      font-size: 2.25rem;
       @include size(auto, 100%);
       text-align: center;
     }
-  }
-}
-
-.image {
-  @include size(100%, 100%);
-  object-fit: cover;
-  border-radius: 10px;
-
-  @media screen and (min-width: $width-tablette) {
-    border-radius: 25px;
-  }
-}
-
-.about-banner {
-  @include size(223px, auto);
-  margin: $margin-mobile;
-  position: relative;
-
-  @media screen and (min-width: $width-tablette) {
-    margin: $margin-desktop;
-  }
-}
-
-.overlay {
-  @include overlay;
-  background: #000000;
-  mix-blend-mode: darken;
-  opacity: 0.3;
-  border-radius: 10px;
-
-  @media screen and (min-width: $width-tablette) {
-    border-radius: 25px;
+    @media screen and (min-width: $width-desktop) {
+      font-size: 3rem;
+    }
   }
 }

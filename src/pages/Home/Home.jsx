@@ -4,15 +4,16 @@ import RentingList from 'components/business/RentingList/RentingList'
 
 function Home() {
   return (
-    <div className="wrapper-width">
-      <Banner
-        type="home"
-        subtitle="Chez vous, partout et ailleurs"
-        image={image}
-        alt="Photo de falaises face à la mer"
-      />
+    <>
+      <div className="home-banner">
+        <Banner
+          subtitle="Chez vous, partout et ailleurs"
+          image={image}
+          alt="Photo de falaises face à la mer"
+        />
+      </div>
       <RentingList />
-    </div>
+    </>
   )
 }
 

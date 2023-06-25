@@ -3,23 +3,23 @@ import { NavLink } from 'react-router-dom'
 
 function Navbar() {
   return (
-    <div className="wrapper-width">
-      <header className="header">
-        <div className="logo-container">
-          <img className="logo" src={Logo} alt="Logo de Kasa" />
+    <header>
+      <div className="header">
+        <div className="header__logo-container">
+          <img className="header__logo" src={Logo} alt="Logo de Kasa" />
         </div>
         <nav>
-          <ul className="navbar">
-            <NavLink to="/">
-              <li>Accueil</li>
-            </NavLink>
-            <NavLink to="/about">
-              <li>A Propos</li>
-            </NavLink>
+          <ul className="header__navbar">
+            <li>
+              <NavLink to="/">Accueil</NavLink>
+            </li>
+            <li>
+              <NavLink to="/about">A Propos</NavLink>
+            </li>
           </ul>
         </nav>
-      </header>
-    </div>
+      </div>
+    </header>
   )
 }
 export default Navbar

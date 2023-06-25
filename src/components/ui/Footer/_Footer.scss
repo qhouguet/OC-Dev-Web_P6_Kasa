@@ -1,5 +1,5 @@
-#footer {
-  height: 210px;
+.footer {
+  @include size(210px, 100%);
   background-color: #000;
   display: flex;
   flex-direction: column;
@@ -8,19 +8,21 @@
   top: 100%;
   padding-top: 66px;
 
-  .legal {
+  .footer__legal {
+    @include font(500, 0.8rem, 142.6%, #fff);
     display: block;
-    color: #fff;
-    font-size: 0.8rem;
     width: 135px;
     text-align: center;
-    line-height: 142.6%;
     margin-top: 10px;
 
     @media screen and (min-width: $width-tablette) {
       width: auto;
-      font-size: 1.6rem;
+      font-size: 1.25rem;
       margin-top: 40px;
+    }
+
+    @media screen and (min-width: $width-desktop) {
+      font-size: 1.6rem;
     }
   }
 }

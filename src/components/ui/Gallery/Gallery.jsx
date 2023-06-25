@@ -2,7 +2,7 @@ import { useState } from 'react'
 import leftBracket from 'images/left-bracket.svg'
 import rightBracket from 'images/right-bracket.svg'
 
-function Gallery({ images }) {
+function Gallery({ images, alt }) {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const goToPrevious = () => {
@@ -44,7 +44,7 @@ function Gallery({ images }) {
           </div>
         </>
       ) : null}
-      <img className="slide" src={images[currentIndex]} alt="Test" />
+      <img className="slide" src={images[currentIndex]} alt={alt} />
     </div>
   )
 }

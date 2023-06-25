@@ -1,12 +1,19 @@
-.cards {
-  @media screen and (min-width: $width-tablette) {
+.card-list {
+  margin: $margin-mobile;
+
+  @media screen and (min-width: $width-desktop) {
     background-color: #f7f7f7;
-    padding: 40px 0;
     border-radius: 25px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
+    align-items: center;
+
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    padding: 3.5%;
+    gap: 40px;
     margin: $margin-desktop;
   }
 }
