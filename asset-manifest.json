@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/oc-dev-web_p6_kasa/static/css/main.77bb4240.css",
-    "main.js": "/oc-dev-web_p6_kasa/static/js/main.4fec038e.js",
+    "main.js": "/oc-dev-web_p6_kasa/static/js/main.d564064f.js",
     "static/media/about_banner.webp": "/oc-dev-web_p6_kasa/static/media/about_banner.e90848a8cc435d17ac90.webp",
     "static/media/home_banner.webp": "/oc-dev-web_p6_kasa/static/media/home_banner.07a313c1d6dfaaaa9d36.webp",
     "static/media/LOGO.svg": "/oc-dev-web_p6_kasa/static/media/LOGO.a5c76d8a1dac09edd59db36304e0bcfa.svg",
@@ -13,10 +13,10 @@
     "static/media/right-bracket.svg": "/oc-dev-web_p6_kasa/static/media/right-bracket.bd225d7b5b3087c3eebd586af977558d.svg",
     "static/media/left-bracket.svg": "/oc-dev-web_p6_kasa/static/media/left-bracket.729be11d821475895895be414bef6d8b.svg",
     "main.77bb4240.css.map": "/oc-dev-web_p6_kasa/static/css/main.77bb4240.css.map",
-    "main.4fec038e.js.map": "/oc-dev-web_p6_kasa/static/js/main.4fec038e.js.map"
+    "main.d564064f.js.map": "/oc-dev-web_p6_kasa/static/js/main.d564064f.js.map"
   },
   "entrypoints": [
     "static/css/main.77bb4240.css",
-    "static/js/main.4fec038e.js"
+    "static/js/main.d564064f.js"
   ]
 }
