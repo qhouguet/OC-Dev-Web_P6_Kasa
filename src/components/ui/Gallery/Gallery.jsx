@@ -28,23 +28,23 @@ function Gallery({ images, alt }) {
       {isMultipleImages ? (
         <>
           <img
-            className="left-bracket"
+            className="slideshow__bracket--left"
             src={leftBracket}
             alt="Bouton vers la slide précédente"
             onClick={goToPrevious}
           />
           <img
-            className="right-bracket"
+            className="slideshow__bracket--right"
             src={rightBracket}
             alt="Bouton vers la slide suivante"
             onClick={goToNext}
           />
-          <div className="slide-numerotation">
+          <div className="slideshow__numerotation">
             {currentIndex + 1}/{images.length}
           </div>
         </>
       ) : null}
-      <img className="slide" src={images[currentIndex]} alt={alt} />
+      <img className="slideshow__slide" src={images[currentIndex]} alt={alt} />
     </div>
   )
 }

@@ -1,20 +1,18 @@
 import Gallery from 'components/ui/Gallery/Gallery'
 import RentingDescription from 'components/ui/RentingDescription/RentingDescription'
 
-function CurrentRenting(props) {
-  const currentRent = props.renting
-
+function CurrentRenting({ renting }) {
   return (
     <>
-      <Gallery images={currentRent.pictures} alt={currentRent.title} />
+      <Gallery images={renting.pictures} alt={renting.title} />
       <RentingDescription
-        title={currentRent.title}
-        description={currentRent.description}
-        host={currentRent.host}
-        rating={currentRent.rating}
-        location={currentRent.location}
-        equipments={currentRent.equipments}
-        tags={currentRent.tags}
+        title={renting.title}
+        description={renting.description}
+        host={renting.host}
+        rating={renting.rating}
+        location={renting.location}
+        equipments={renting.equipments}
+        tags={renting.tags}
       />
     </>
   )

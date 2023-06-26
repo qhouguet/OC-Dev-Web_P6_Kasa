@@ -1,4 +1,4 @@
-function Tag(props) {
-  return <div className="tag">{props.tag}</div>
+function Tag({ tag }) {
+  return <div className="tag">{tag}</div>
 }
 export default Tag

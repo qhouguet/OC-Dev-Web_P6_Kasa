@@ -34,20 +34,21 @@
   }
 
   &__image {
-    @include size(auto, 100%);
-    max-height: 255px;
+    @include size(255px, 100%);
+    // max-height: 255px;
     border-radius: 10px;
     background-color: $main-color;
     object-fit: cover;
 
     @media screen and (min-width: $width-desktop) {
+      height: auto;
       max-height: 340px;
     }
   }
 
   &__overlay {
     @include overlay;
-    max-height: 255px;
+    height: 255px;
     border-radius: 10px;
     background: linear-gradient(
       180deg,
@@ -56,8 +57,15 @@
     );
 
     @media screen and (min-width: $width-desktop) {
+      height: auto;
       max-height: 340px;
       transition: opacity 0.3s ease-in-out;
+
+      &::before {
+        content: '';
+        float: left;
+        padding-top: 100%;
+      }
 
       &:hover {
         opacity: 0;

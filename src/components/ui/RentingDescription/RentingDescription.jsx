@@ -3,31 +3,39 @@ import Host from 'components/ui/Host/Host'
 import Rating from 'components/ui/Rating/Rating'
 import Collapse from 'components/ui/Collapse/Collapse'
 
-function RentingDescription(props) {
+function RentingDescription({
+  title,
+  description,
+  host,
+  rating,
+  location,
+  equipments,
+  tags,
+}) {
   return (
     <>
       <div className="renting-description">
         <div>
-          <h2>{props.title}</h2>
-          <span className="location">{props.location}</span>
-          <div className="tags">
-            {props.tags.map((tag) => (
+          <h2 className="renting-description__title">{title}</h2>
+          <span className="renting-description__location">{location}</span>
+          <div className="renting-description__tags">
+            {tags.map((tag) => (
               <Tag key={tag} tag={tag} />
             ))}
           </div>
         </div>
-        <div className="host-rating">
-          <Host name={props.host.name} picture={props.host.picture} />
-          <Rating rating={props.rating} />
+        <div className="renting-description__host">
+          <Host name={host.name} picture={host.picture} />
+          <Rating rating={rating} />
         </div>
       </div>
 
-      <div className="collapse-renting">
-        <div className="renting-wrapper">
-          <Collapse title="Description" description={props.description} />
+      <div className="renting-collapse">
+        <div className="renting-collapse__wrapper">
+          <Collapse title="Description" description={description} />
         </div>
-        <div className="renting-wrapper">
-          <Collapse title="Équipements" description={props.equipments} />
+        <div className="renting-collapse__wrapper">
+          <Collapse title="Équipements" description={equipments} />
         </div>
       </div>
     </>

@@ -4,33 +4,40 @@
   flex-direction: column;
 
   @media screen and (min-width: $width-tablette) {
-    font-size: 2.25rem;
-    margin: $margin-desktop;
     flex-direction: row;
     justify-content: space-between;
   }
+  @media screen and (min-width: $width-desktop) {
+    margin: $margin-desktop;
+  }
 
-  h2 {
+  &__title {
     @include font(500, 1.15rem, 142.6%, $main-color);
     @media screen and (min-width: $width-tablette) {
+      font-size: 1.7rem;
+    }
+    @media screen and (min-width: $width-desktop) {
       font-size: 2.25rem;
     }
   }
 
-  .location {
+  &__location {
     @include font(500, 0.875rem, 142.6%, $main-color);
     display: inline-block;
     margin: 8px 0;
     @media screen and (min-width: $width-tablette) {
+      font-size: 1.01rem;
+    }
+    @media screen and (min-width: $width-desktop) {
       font-size: 1.15rem;
     }
   }
 
-  .tags {
+  &__tags {
     display: flex;
   }
 
-  .host-rating {
+  &__host {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -43,18 +50,20 @@
   }
 }
 
-.collapse-renting {
+.renting-collapse {
   margin: $margin-mobile;
   @media screen and (min-width: $width-tablette) {
-    margin: $margin-desktop;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
-}
+  @media screen and (min-width: $width-desktop) {
+    margin: $margin-desktop;
+  }
 
-.renting-wrapper {
-  @media screen and (min-width: $width-tablette) {
-    width: 47%;
+  &__wrapper {
+    @media screen and (min-width: $width-tablette) {
+      width: 47%;
+    }
   }
 }

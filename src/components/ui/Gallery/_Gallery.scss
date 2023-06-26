@@ -4,8 +4,11 @@
   position: relative;
 
   @media screen and (min-width: $width-tablette) {
-    margin: $margin-desktop;
     @include size(415px, auto);
+  }
+
+  @media screen and (min-width: $width-desktop) {
+    margin: $margin-desktop;
   }
 
   @mixin bracket {
@@ -20,7 +23,7 @@
     }
   }
 
-  .left-bracket {
+  &__bracket--left {
     @include bracket;
     left: 6px;
 
@@ -29,7 +32,7 @@
     }
   }
 
-  .right-bracket {
+  &__bracket--right {
     @include bracket;
     right: 6px;
 
@@ -38,7 +41,7 @@
     }
   }
 
-  .slide-numerotation {
+  &__numerotation {
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -49,9 +52,8 @@
     }
   }
 
-  .slide {
-    width: 100%;
-    height: 100%;
+  &__slide {
+    @include size(100%, 100%);
     border-radius: 10px;
     object-fit: cover;
 

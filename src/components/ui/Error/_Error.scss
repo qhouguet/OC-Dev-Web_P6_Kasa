@@ -1,9 +1,9 @@
-.error-link {
+.error__link {
   color: $main-color;
 }
 
-.error-page {
-  @extend .error-link;
+.error {
+  @extend .error__link;
   margin: 120px 57px;
   text-align: center;
 
@@ -11,19 +11,25 @@
     display: block;
   }
 
-  .error-title {
+  &__title {
     font-size: 6.4rem;
     font-weight: 700;
     @media screen and (min-width: $width-tablette) {
+      font-size: 12.2rem;
+    }
+    @media screen and (min-width: $width-desktop) {
       font-size: 18rem;
     }
   }
 
-  .error-description {
+  &__description {
     font-size: 1.15rem;
     line-height: 142.6%;
     margin: 113px 0;
     @media screen and (min-width: $width-tablette) {
+      font-size: 1.7rem;
+    }
+    @media screen and (min-width: $width-desktop) {
       font-size: 2.25rem;
     }
   }

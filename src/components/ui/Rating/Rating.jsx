@@ -1,9 +1,9 @@
 import redStar from 'images/red_star.svg'
 import greyStar from 'images/grey_star.svg'
 
-function Rating(props) {
+function Rating({ rating }) {
   const allStars = [1, 2, 3, 4, 5]
-  const currentStars = props.rating
+  const currentStars = rating
 
   return (
     <div className="rating">
