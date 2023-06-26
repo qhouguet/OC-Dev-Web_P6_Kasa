@@ -21,7 +21,12 @@ function Collapse({ title, description }) {
 
   return (
     <div className="collapse">
-      <div className="collapse__bar">
+      <div
+        className="collapse__bar"
+        onClick={() => {
+          toggle()
+        }}
+      >
         <h2 className="collapse__bar__title">{title}</h2>
         <img
           className={`collapse__bar__button ${
@@ -29,9 +34,6 @@ function Collapse({ title, description }) {
           }`}
           src={open_btn}
           alt="Ouvrir ou fermer le composant"
-          onClick={() => {
-            toggle()
-          }}
         />
       </div>
       {isArray ? (

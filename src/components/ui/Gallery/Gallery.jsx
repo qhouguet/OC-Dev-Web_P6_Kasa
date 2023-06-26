@@ -33,18 +33,22 @@ function Gallery({ images, alt }) {
     <div className="slideshow">
       {isMultipleImages ? (
         <>
-          <img
-            className="slideshow__bracket--left"
-            src={leftBracket}
-            alt="Bouton vers la slide précédente"
-            onClick={goToPrevious}
-          />
-          <img
-            className="slideshow__bracket--right"
-            src={rightBracket}
-            alt="Bouton vers la slide suivante"
-            onClick={goToNext}
-          />
+          <span className="bracket-container--left" onClick={goToPrevious}>
+            <img
+              className="slideshow__bracket--left"
+              src={leftBracket}
+              alt="Bouton vers la slide précédente"
+            />
+            <div className="bracket-overlay--left"></div>
+          </span>
+          <span className="bracket-container--right" onClick={goToNext}>
+            <img
+              className="slideshow__bracket--right"
+              src={rightBracket}
+              alt="Bouton vers la slide suivante"
+            />
+            <div className="bracket-overlay--right"></div>
+          </span>
           <div className="slideshow__numerotation">
             {currentIndex + 1}/{images.length}
           </div>
