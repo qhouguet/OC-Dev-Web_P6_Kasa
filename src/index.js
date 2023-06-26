@@ -8,6 +8,9 @@ import Routing from 'Routing'
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
-    <Routing header={<Navbar />} footer={<Footer />} />
+    <>
+      <Routing header={<Navbar />} />
+      <Footer />
+    </>
   </React.StrictMode>
 )

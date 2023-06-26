@@ -4,6 +4,7 @@ import open_btn from 'images/open_btn.svg'
 function Collapse({ title, description }) {
   const [open, setOpen] = useState(false)
 
+  // On change la valeur de notre state open à l'appel de la fonction toggle()
   function toggle() {
     setOpen(!open)
   }
@@ -14,7 +15,7 @@ function Collapse({ title, description }) {
   const isArray = Array.isArray(description)
 
   // On vient changer la valeur de notre attribut aria-hidden
-  // selon notre state
+  // selon la valeur de notre state open
   let isAriaHiddenTrue = ''
   open ? (isAriaHiddenTrue = 'false') : (isAriaHiddenTrue = 'true')
 

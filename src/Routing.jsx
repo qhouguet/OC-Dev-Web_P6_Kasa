@@ -4,7 +4,9 @@ import About from './pages/About/About'
 import Renting from './pages/Renting/Renting'
 import Error from './pages/Error404/Error404'
 
-function Routing({ header, footer }) {
+function Routing({ header }) {
+  // On intègre le header dans notre router car il utilise les
+  // balises NavLink qui ont besoin de la logique du router
   return (
     <Router>
       {header}
@@ -16,7 +18,6 @@ function Routing({ header, footer }) {
           <Route path="*" element={<Error />} />
         </Routes>
       </main>
-      {footer}
     </Router>
   )
 }

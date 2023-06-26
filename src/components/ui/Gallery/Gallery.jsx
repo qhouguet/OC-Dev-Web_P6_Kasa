@@ -5,18 +5,24 @@ import rightBracket from 'images/right-bracket.svg'
 function Gallery({ images, alt }) {
   const [currentIndex, setCurrentIndex] = useState(0)
 
+  // On vient vérifier si on est à l'index 0
+  // Si c'est le cas, la fonction vient set le nouvel index dans notre state à notre taille de tableau - 1
   const goToPrevious = () => {
     const isFirstSlide = currentIndex === 0
     const newIndex = isFirstSlide ? images.length - 1 : currentIndex - 1
     setCurrentIndex(newIndex)
   }
 
+  // Même principe que la fonction previous, mais appliqué dans le cas où on est à la dernière image de notre tableau
   const goToNext = () => {
     const isLastSlide = currentIndex === images.length - 1
     const newIndex = isLastSlide ? 0 : currentIndex + 1
     setCurrentIndex(newIndex)
   }
 
+  // On vérifie si on a plusieurs images dans notre tableau, et on stocke ça avec un booléen
+  // Si on a + d'une image, on affichera les chevrons gauche et droite + le compteur d'images sur
+  // le carousel
   let isMultipleImages = false
 
   if (images.length > 1) {

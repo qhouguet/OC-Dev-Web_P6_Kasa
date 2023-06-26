@@ -1,4 +1,6 @@
 function Host(props) {
+  // On vient split le nom de notre hôte en deux variables pour gérer l'affichage
+  // proprement
   const name = props.name.split(' ')
   const firstName = name[0]
   const lastName = name[1]

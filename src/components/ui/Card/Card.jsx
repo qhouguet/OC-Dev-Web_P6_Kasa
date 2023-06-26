@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 
 function Card({ title, image, alt, id }) {
+  // On redirige au clic sur notre carte vers un url où on passe en paramètre
+  // l'id de l'objet correspondant à notre carte.
   return (
     <Link
       className="card-container"

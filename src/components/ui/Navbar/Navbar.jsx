@@ -2,6 +2,9 @@ import Logo from 'images/LOGO.svg'
 import { NavLink } from 'react-router-dom'
 
 function Navbar() {
+  // On utilise les balises NavLink de react router dom qui nous permettent notamment
+  // de savoir si les liens sont en pending ou active et de rajouter automatiquement
+  // une classe "active" si on est sur la page en question.
   return (
     <header>
       <div className="header">

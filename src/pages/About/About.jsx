@@ -3,6 +3,8 @@ import image from 'images/about_banner.webp'
 import Collapse from 'components/ui/Collapse/Collapse'
 
 function About() {
+  // On vient stocker dans un objet les valeurs de nos collapses de la page About
+  // cela permettra de la mettre à jour facilement dans le futur
   const about = [
     {
       title: 'Fiabilité',
