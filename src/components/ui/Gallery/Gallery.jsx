@@ -24,10 +24,27 @@ function Gallery({ images, alt }) {
   // Si on a + d'une image, on affichera les chevrons gauche et droite + le compteur d'images sur
   // le carousel
   let isMultipleImages = false
+  let isNoImage = false
 
-  if (images.length > 1) {
-    isMultipleImages = true
+  // On vient vérifier si on a plus d'une image ou si on en a 0 avec
+  // un switch / cases, si on a 0 image dans notre tableau, on
+  // passe notre variable isNoImage à true et on affiche donc pas d'images
+  // si on a plus d'une image, on passe notre variable isMultipleImages à true
+  // et on affiche nos chevrons et notre compteur d'images.
+
+  switch (images.length) {
+    case 0:
+      // console.log(images.length)
+      isNoImage = true
+      break
+    case 1:
+      break
+    default:
+      isMultipleImages = true
   }
+  // if (images.length > 1) {
+  //   isMultipleImages = true
+  // }
 
   return (
     <div className="slideshow">
@@ -54,7 +71,13 @@ function Gallery({ images, alt }) {
           </div>
         </>
       ) : null}
-      <img className="slideshow__slide" src={images[currentIndex]} alt={alt} />
+      {isNoImage ? null : (
+        <img
+          className="slideshow__slide"
+          src={images[currentIndex]}
+          alt={alt}
+        />
+      )}
     </div>
   )
 }
