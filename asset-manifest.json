@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/oc-dev-web_p6_kasa/static/css/main.d937a7e3.css",
-    "main.js": "/oc-dev-web_p6_kasa/static/js/main.39917029.js",
+    "main.css": "/oc-dev-web_p6_kasa/static/css/main.765c4165.css",
+    "main.js": "/oc-dev-web_p6_kasa/static/js/main.8476bed5.js",
     "static/media/about_banner.webp": "/oc-dev-web_p6_kasa/static/media/about_banner.e90848a8cc435d17ac90.webp",
     "static/media/home_banner.webp": "/oc-dev-web_p6_kasa/static/media/home_banner.07a313c1d6dfaaaa9d36.webp",
-    "static/media/LOGO.svg": "/oc-dev-web_p6_kasa/static/media/LOGO.a5c76d8a1dac09edd59db36304e0bcfa.svg",
-    "static/media/LOGO_WHITE.svg": "/oc-dev-web_p6_kasa/static/media/LOGO_WHITE.49d6c6c773443de2f700868f876ad8db.svg",
-    "static/media/grey_star.svg": "/oc-dev-web_p6_kasa/static/media/grey_star.377ea717c5d661f2cad398b2acb538e8.svg",
-    "static/media/red_star.svg": "/oc-dev-web_p6_kasa/static/media/red_star.d240b10f0020a6d071a1d4927acb5999.svg",
+    "static/media/LOGO.svg": "/oc-dev-web_p6_kasa/static/media/LOGO.a5783b4cef26b8023cc300291492bf29.svg",
+    "static/media/LOGO_WHITE.svg": "/oc-dev-web_p6_kasa/static/media/LOGO_WHITE.f84048defbdb7b04a3a0c61271595212.svg",
+    "static/media/grey_star.svg": "/oc-dev-web_p6_kasa/static/media/grey_star.a90a49922c0bace7a9b563236d7176e5.svg",
+    "static/media/red_star.svg": "/oc-dev-web_p6_kasa/static/media/red_star.811c833a9c815815650b7bf601efb91f.svg",
     "index.html": "/oc-dev-web_p6_kasa/index.html",
-    "static/media/open_btn.svg": "/oc-dev-web_p6_kasa/static/media/open_btn.a9645dcdb6f6967bb041f6aef70040a8.svg",
-    "static/media/right-bracket.svg": "/oc-dev-web_p6_kasa/static/media/right-bracket.bd225d7b5b3087c3eebd586af977558d.svg",
-    "static/media/left-bracket.svg": "/oc-dev-web_p6_kasa/static/media/left-bracket.729be11d821475895895be414bef6d8b.svg",
-    "main.d937a7e3.css.map": "/oc-dev-web_p6_kasa/static/css/main.d937a7e3.css.map",
-    "main.39917029.js.map": "/oc-dev-web_p6_kasa/static/js/main.39917029.js.map"
+    "static/media/open_btn.svg": "/oc-dev-web_p6_kasa/static/media/open_btn.faf487a39edee4e3ccaba136b2e6d651.svg",
+    "static/media/right-bracket.svg": "/oc-dev-web_p6_kasa/static/media/right-bracket.9dcc463da0e48d92eadf14c36732149d.svg",
+    "static/media/left-bracket.svg": "/oc-dev-web_p6_kasa/static/media/left-bracket.f0a0e56f113398967946ddb87dfb8cde.svg",
+    "main.765c4165.css.map": "/oc-dev-web_p6_kasa/static/css/main.765c4165.css.map",
+    "main.8476bed5.js.map": "/oc-dev-web_p6_kasa/static/js/main.8476bed5.js.map"
   },
   "entrypoints": [
-    "static/css/main.d937a7e3.css",
-    "static/js/main.39917029.js"
+    "static/css/main.765c4165.css",
+    "static/js/main.8476bed5.js"
   ]
 }
