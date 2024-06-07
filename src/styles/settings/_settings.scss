@@ -12,11 +12,18 @@ $width-desktop: 1024px;
 #root {
   font-size: 100%;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 header,
 main {
   max-width: 1440px;
+  width: 100%;
+}
+
+main:has(.loader) {
   margin: auto;
 }
 

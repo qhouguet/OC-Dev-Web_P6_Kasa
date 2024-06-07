@@ -4,13 +4,13 @@ import Rating from 'components/ui/Rating/Rating'
 import Collapse from 'components/ui/Collapse/Collapse'
 
 function RentingDescription({
-  title,
-  description,
-  host,
-  rating,
-  location,
-  equipments,
-  tags,
+  title = '',
+  description = '',
+  host = {},
+  rating = 0,
+  location = '',
+  equipments = [],
+  tags = [],
 }) {
   return (
     <>

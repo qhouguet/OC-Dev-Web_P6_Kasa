@@ -2,7 +2,7 @@ import { useState } from 'react'
 import leftBracket from 'images/left-bracket.svg'
 import rightBracket from 'images/right-bracket.svg'
 
-function Gallery({ images, alt }) {
+function Gallery({ images, alt = '' }) {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   // On vient vérifier si on est à l'index 0
@@ -31,10 +31,8 @@ function Gallery({ images, alt }) {
   // passe notre variable isNoImage à true et on affiche donc pas d'images
   // si on a plus d'une image, on passe notre variable isMultipleImages à true
   // et on affiche nos chevrons et notre compteur d'images.
-
   switch (images.length) {
     case 0:
-      // console.log(images.length)
       isNoImage = true
       break
     case 1:
@@ -42,28 +40,17 @@ function Gallery({ images, alt }) {
     default:
       isMultipleImages = true
   }
-  // if (images.length > 1) {
-  //   isMultipleImages = true
-  // }
 
-  return (
+  return isNoImage ? null : (
     <div className="slideshow">
       {isMultipleImages ? (
         <>
           <span className="bracket-container--left" onClick={goToPrevious}>
-            <img
-              className="slideshow__bracket--left"
-              src={leftBracket}
-              alt="Bouton vers la slide précédente"
-            />
+            <img className="slideshow__bracket--left" src={leftBracket} alt="Bouton vers la slide précédente" />
             <div className="bracket-overlay--left"></div>
           </span>
           <span className="bracket-container--right" onClick={goToNext}>
-            <img
-              className="slideshow__bracket--right"
-              src={rightBracket}
-              alt="Bouton vers la slide suivante"
-            />
+            <img className="slideshow__bracket--right" src={rightBracket} alt="Bouton vers la slide suivante" />
             <div className="bracket-overlay--right"></div>
           </span>
           <div className="slideshow__numerotation">
@@ -71,13 +58,7 @@ function Gallery({ images, alt }) {
           </div>
         </>
       ) : null}
-      {isNoImage ? null : (
-        <img
-          className="slideshow__slide"
-          src={images[currentIndex]}
-          alt={alt}
-        />
-      )}
+      <img className="slideshow__slide" src={images[currentIndex]} alt={alt} />
     </div>
   )
 }

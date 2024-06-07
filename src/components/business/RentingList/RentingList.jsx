@@ -1,19 +1,9 @@
 import Card from 'components/ui/Card/Card'
-import { useEffect, useState } from 'react'
-import { fetchData } from 'services/fetch'
 
-function Cards() {
-  const [data, setData] = useState([])
-
-  useEffect(() => {
-    fetchData().then((res) => {
-      setData(res)
-    })
-  }, [])
-
+function Cards({ rentings }) {
   return (
     <section className="card-list">
-      {data.map((data) => (
+      {rentings.map((data) => (
         <Card title={data.title} image={data.cover} alt={data.title} path={'/renting/' + data.id} key={data.id} />
       ))}
     </section>
