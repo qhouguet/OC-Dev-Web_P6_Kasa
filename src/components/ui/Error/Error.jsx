@@ -1,14 +1,13 @@
 import { Link } from 'react-router-dom'
+import { ERROR_NOT_FOUND } from 'utils/constant'
 
 function Error() {
   return (
     <div className="error">
-      <span className="error__title">404</span>
-      <span className="error__description">
-        Oups! La page que vous demandez n'existe pas.
-      </span>
+      <span className="error__title">{ERROR_NOT_FOUND['code']}</span>
+      <span className="error__description">{ERROR_NOT_FOUND['notFound']}</span>
       <Link className="error__link" to="/">
-        Retourner sur la page d'accueil
+        {ERROR_NOT_FOUND['goBack']}
       </Link>
     </div>
   )

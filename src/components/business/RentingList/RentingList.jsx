@@ -14,13 +14,7 @@ function Cards() {
   return (
     <section className="card-list">
       {data.map((data) => (
-        <Card
-          title={data.title}
-          image={data.cover}
-          alt={data.title}
-          id={data.id}
-          key={data.id}
-        />
+        <Card title={data.title} image={data.cover} alt={data.title} path={'/renting/' + data.id} key={data.id} />
       ))}
     </section>
   )

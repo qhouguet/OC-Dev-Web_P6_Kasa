@@ -43,6 +43,7 @@
       @include size(auto, 100%);
       text-align: center;
     }
+
     @media screen and (min-width: $width-desktop) {
       font-size: 3rem;
     }

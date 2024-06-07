@@ -8,6 +8,7 @@
   position: relative;
   margin-bottom: 20px;
   width: 100%;
+
   @media screen and (min-width: $width-tablette) {
     margin-bottom: 30px;
   }
@@ -17,22 +18,12 @@
     @include font(400, 0.8rem, 142.6%, $main-color);
     background: #f7f7f7;
     padding: 0;
-    display: grid;
-    grid-template-rows: 0fr;
-    transition: grid-template-rows 0.3s ease;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
 
     @media screen and (min-width: $width-tablette) {
       font-size: 1.12rem;
-    }
-
-    & > div {
-      overflow: hidden;
-    }
-
-    &--active {
-      grid-template-rows: 1fr;
-      height: auto;
-      overflow: auto;
     }
 
     &__style {
@@ -52,6 +43,7 @@
 
     &__button {
       transition: transform 0.15s linear;
+
       @media screen and (min-width: $width-tablette) {
         width: 24px;
       }

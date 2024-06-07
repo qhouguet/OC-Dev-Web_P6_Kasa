@@ -2,7 +2,7 @@ import CurrentRenting from 'components/business/CurrentRenting/CurrentRenting'
 import { useEffect, useState } from 'react'
 import { fetchData } from 'services/fetch'
 import Error from 'components/ui/Error/Error'
-import { useLocation } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
 function Renting() {
   // On vient utiliser deux states, un pour stocker notre retour de fetch
@@ -19,22 +19,11 @@ function Renting() {
     })
   }, [])
 
-  // On vient récupérer l'id en paramètre grâce à la methode js native .get()
-  // On aurait pu utiliser le hook useSearchParams de react router mais comme on
-  // ne souhaite pas modifier l'url, on peut se contenter du js natif.
-  // let params = new URL(document.location).searchParams
-  // const pathID = params.get('?_id')
-
-  // On vient utiliser la méthode useLocation() de react router dom
-  // avec le constructeur URLSearchParams pour récupérer notre
-  // paramètre ?_id= et ainsi pouvoir le manipuler dans une variable pathID
-  const location = useLocation()
-  let params = new URLSearchParams(location.search)
-  const pathID = params.get('_id')
+  // On récupère l'id grâce au hook useParams de react-router
+  const { id } = useParams()
 
   // On va chercher l'objet dont l'id est égal à l'id passé en url si il existe
-
-  const rent = data.find((data) => data.id === pathID)
+  const rent = data.find((data) => data.id === id)
 
   // Si on a pas encore eu le résultat du fetch, on affiche rien
   if (isLoading) return <></>
